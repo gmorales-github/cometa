@@ -2,10 +2,11 @@ import pygame
 
 
 class PygameApp:
-    def __init__(self, width, height, title):
+    def __init__(self, width, height, title, logger):
         self.width = width
         self.height = height
         self.title = title
+        self.logger = logger
 
         # Inicializar Pygame
         pygame.init()
@@ -25,6 +26,8 @@ class PygameApp:
 
     def handle_events(self):
         for event in pygame.event.get():
+            # logger event
+            #self.logger.info(event)
             if event.type == pygame.QUIT:
                 self.running = False
 

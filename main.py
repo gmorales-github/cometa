@@ -12,13 +12,10 @@ def main():
     logger_config = LoggerConfig('logger')
     logger = logger_config.get_logger()
 
-
     logger.info("--- Start ---")
-
     # app pygame object
-    app = PygameApp(640, 480, TITLE_SCREEN)
+    app = PygameApp(640, 480, TITLE_SCREEN, logger)
     app.run()
-
     logger.info("--- End ---")
 
 if __name__ == '__main__':
